@@ -14,10 +14,26 @@
     height: 6rem;
 }
 
-.hero__subtitles{
-    color: var(--clr-slate800);
-    font-size: var(--sizes-base);
+.hero__subtitles {
+    color: var(--clr-slate100); /* Text color */
+    font-size: 80px; /* Font size */
+    text-align: center; /* Center-align text */
+
+    /* Glowing animation */
+    -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+    -moz-animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 1.5s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1f1e1e, 0 0 40px #423d40, 0 0 50px #3f3a3d, 0 0 60px #4a4648, 0 0 70px #434343; /* Initial text shadow */
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #654dff, 0 0 40px #654dff, 0 0 50px #654dff, 0 0 60px #654dff, 0 0 70px #654dff, 0 0 80px #2404f4; /* Final text shadow */
+    }
+}
+
 
 .hero__title{
     color: var(--clr-slate400);
