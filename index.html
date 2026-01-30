@@ -1,171 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Udayraj</title>
-  </head>
-  <body>
-    <header class="header container">
-      <nav>
-        <ul class="header__menu">
-          <li><a class="header__link" href="#about">About</a></li>
-          <li><a class="header__link" href="#featured">work</a></li>
-          <li><a class="header__link" href="#contact">contact</a></li>
-          <li class="header__line"></li>
-          <button id="theme-toggle" class="header__sun">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
-              />
-            </svg>
-          </button>
-          <li>
-            <a
-              class="header__resume btn"
-              href="https://drive.google.com/file/d/1qRUeyN98haSbN-7iYlAZgsOXMRlYUd7K/view?usp=sharing"
-              target="_blank"
-              >Resume</a
-            >
-          </li>
-        </ul>
-        <button class="header__bars">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </nav>
-    </header>
-    <!-- mobile navigation -->
-    <!-- <div class="mobile-nav">
-      <ul class="mobile-nav__menu">
-        <li class="mobile-nav__link"><a href="about">About</a></li>
-        <li class="mobile-nav__link"><a href="work">work</a></li>
-        <li class="mobile-nav__link"><a href="contact">contact</a></li>
-        <li class="mobile-nav__line"></li>
-        <li class="header__sun"><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-        </svg></button></li>
-        <li><a class="mobile-nav__btn btn" href="#">Resume</a></li>
-      </ul>
-    </div> -->
-    <!-- end of mobile navigation -->
-    <main>
-      <section class="hero container">
-        <img class="hero__img" src="/resume.jpeg" alt="profile picture" />
-        <h2 class="hero__subtitles">Hi i'm Udayraj</h2>
-        <h1 class="hero__title">Front-END<br />WEB DEVELOPER.</h1>
-        <p class="hero__description">
-          A passionate <strong>Front-end & Back-end</strong> web developer and
-          <strong>UI/UX</strong> enthusiast specialized in building stunning
-          pixel-perfect interactive websites/applications
-        </p>
-        <a
-          class="hero__btn social btn"
-          href="https://www.linkedin.com/in/udayrajghuge"
-          target="_blank"
-          style="background-color: #005988"
-          >Linkedin</a
-        >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Udayraj — Backend / Full-Stack Developer</title>
 
-        <a
-          class="hero__btn social btn"
-          href="https://github.com/forUdayraj"
-          target="_blank"
-          style="
-            background-color: rgb(246, 243, 243);
-            color: var(--clr-slate800);
-          "
-          >Github</a
-        >
-      </section>
-      <section class="about container section">
-        <div class="about__content">
-          <h2 id="about" class="about__title">Past Projects</h2>
-          <a href="https://github.com/forUdayraj"
-            ><h3 class="about__subtitle">MinMentor</h3>
-          </a>
-          <p class="about__description">
-            Mentor and Mentee 1:1 Sessions for Various domain and jobfairs
-            created in Nextjs and Typescript
-          </p>
-          <a href="https://github.com/forUdayraj"
-            ><h3 class="about__subtitle">FinVault</h3>
-          </a>
-          <p class="about__description">
-            Built and deployed a secure full-stack banking application using
-            Spring Boot, React, Hibernate, and MySQL with real-time transactions
-            and responsive UI.
-          </p>
-          <a href="https://github.com/forUdayraj"
-            ><h3 class="about__subtitle">Homeservicebooking</h3>
-          </a>
-          <p class="about__description">
-            Developed a responsive Home Service Booking platform using Node.js,
-            Express.js, MySQL, and Bootstrap, enabling seamless service
-            browsing, scheduling, and customer–provider interactions.
-          </p>
-        </div>
-      </section>
-      <section class="about container section">
-        <div class="about__content">
-          <h2 id="about" class="about__title">About</h2>
-          <p class="about__description">
-            Hello there! I'm Udayraj. a Frontend / Fullstack web developer from
-            India. let's build something
-          </p>
-          <hr class="about__hr" />
-          <h3 class="about__subtitle">Technologies</h3>
-          <div class="about__ul-container">
-            <ul class="about__ul">
-              <li class="about__list">Javascript</li>
-              <li class="about__list">CSS</li>
-              <li class="about__list">HTML</li>
-            </ul>
-            <ul class="about__ul">
-              <li class="about__list">Reactjs</li>
-              <li class="about__list">NodeJS</li>
-              <li class="about__list">ExpressJS</li>
-            </ul>
-          </div>
-        </div>
-        <div></div>
-      </section>
-      <section class="contact container section">
-        <h2 id="contact" class="contact__title">Get In Contact</h2>
-        <p class="contact__description">
-          If you want to build a websites or tech related projects go through
-          the contact i can definiatly build a better product than this.
-        </p>
-        <a
-          class="contact__btn btn"
-          href="mailto:for.udayraj@gmail.com"
-          target="_blank"
-          >Reach Out</a
-        >
-      </section>
-    </main>
-    <footer class="footer container section">
-      <h3 class="footer__title">~ Udayraj ~</h3>
-    </footer>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <img src="resume.jpeg" alt="Udayraj" class="avatar" />
+
+      <div class="header-text">
+        <h1 class="name">Udayraj</h1>
+        <p class="role">Backend / Full-Stack Developer</p>
+
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="intro" id="about">
+      <h2>A Little Bit About Me</h2>
+
+      <p>
+        I’m <strong>Udayraj</strong>, a backend-focused developer who enjoys
+        designing secure APIs, scalable services, and clean system architectures.
+      </p>
+
+      <p>
+        I work primarily with <strong>Spring Boot, MySQL, JWT, Angular, and React</strong>
+        and like building software that survives production.
+      </p>
+
+      <p>
+        Interested in backend engineering, API design, and real-world systems.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>
+          Java Full-Stack Developer
+          <span>— Metamorphosis Technologies, Mumbai</span>
+        </h3>
+        <p class="meta">Jul 2025 – Nov 2025 (CDAC Campus Placement)</p>
+
+        <ul>
+          <li>Designed and developed Spring Boot REST APIs for Provider, Claims, and Policy modules.</li>
+          <li>Built reusable Excel validation engine reducing bad data by 90%.</li>
+          <li>Integrated Angular frontend with backend APIs.</li>
+          <li>Resolved 15+ production defects using logs and DB tracing.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>
+          Backend Developer Intern
+          <span>— CoreFinExperts (DhanXpert), Mumbai</span>
+        </h3>
+        <p class="meta">Feb 2024 – May 2024</p>
+
+        <ul>
+          <li>Built JWT-secured APIs using Spring Boot + MySQL.</li>
+          <li>Implemented Spring Scheduler jobs reducing manual work by 60%.</li>
+          <li>Integrated APIs with React + Material UI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+
+      <div class="item">
+        <h3>FinVault</h3>
+        <p class="meta">Spring Boot · Hibernate · React · MySQL</p>
+        <p>Secure banking platform with layered architecture.</p>
+      </div>
+
+      <div class="item">
+        <h3>FieldTrust</h3>
+        <p class="meta">Spring Boot · React Vite · JWT · MySQL</p>
+        <p>Service booking system with role-based access.</p>
+      </div>
+
+      <div class="item">
+        <h3>Home Service Booking</h3>
+        <p class="meta">Node.js · Express · MySQL</p>
+        <p>Backend-driven service booking platform.</p>
+      </div>
+
+      <div class="item">
+        <h3>MinMentor</h3>
+        <p class="meta">Next.js · TypeScript</p>
+        <p>Mentor–mentee 1:1 session booking system.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Get in touch</h2>
+      <p>
+        <a href="mailto:for.udayraj@gmail.com">Email</a> ·
+        <a href="https://github.com/forUdayraj" target="_blank">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/udayrajghuge" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- DARK MODE SCRIPT -->
+  <script>
+  const toggle = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    root.classList.add("dark");
+    toggle.textContent = "Light Mode";
+  } else {
+    toggle.textContent = "Dark Mode";
+  }
+
+  // Toggle theme
+  toggle.addEventListener("click", () => {
+    const isDark = root.classList.toggle("dark");
+    toggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
+
+
+</body>
 </html>

@@ -23,7 +23,7 @@
     font-size: var(--sizes-sm);
 }
 
-@media (miin-screen: 475px) {
+@media (min-width: 475px) {
     .contact{
         gap: 1.5rem;
     }
